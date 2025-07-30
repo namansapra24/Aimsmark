@@ -2401,6 +2401,16 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-bottom: 0;
 }
 
+.chy-para-11 {
+  font-family: var(--urbanist);
+  color: #504e4e;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.556;
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
 .chy-para-2 {
   font-family: var(--urbanist);
   color: #575757;
@@ -2771,6 +2781,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative; /* Important for absolute positioning */
   gap: 30px;
 }
 .chy-header-1-wrap .left {
@@ -2783,11 +2794,23 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding: 20px 0;
 }
 
+.chy-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.chy-logo img {
+  max-width: 80px; /* Adjust as needed */
+}
+
 .chy-cart-1 {
   position: relative;
 }
 .chy-cart-1::after {
-  content: "";
   position: absolute;
   top: 50%;
   right: 60px;
@@ -5883,9 +5906,6 @@ header innter
     margin-bottom: 50px;
   }
 }
-.chy-solutions-1-content .section-title-wrap .chy-section-para-1 {
-  max-width: 480px;
-}
 .chy-solutions-1-content .inner-div {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -6274,8 +6294,7 @@ header innter
   position: relative;
 }
 .chy-research-1-item .main-img {
-  width: 170px;
-  height: 170px;
+  width: 100px;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
@@ -6295,8 +6314,8 @@ header innter
   color: #fff;
 }
 .chy-research-1-item .icon {
-  width: 63px;
-  height: 63px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #fff;
   position: absolute;
@@ -9131,7 +9150,7 @@ header innter
 }
 
 .chy-cta-1-area {
-  margin-top: -150px;
+  margin-top: -80px;
   position: relative;
   z-index: 1;
 }
