@@ -402,29 +402,6 @@ hero-2-end
 */
 
 
-
-/* 
-	testimonial-2-start
-*/
-let chytestimonial2 = new Swiper('.chy_testimonial_2_active', {
-	loop: true,
-	spaceBetween: 0,
-	speed: 500,
-	rtl: false,
-	autoplay: {
-		delay: 5000,
-	},
-
-	pagination: {
-		el: ".chy-testimonial-2-pagination",
-		clickable: true
-	},
-});
-/* 
-testimonial-2-end
-*/
-
-
 /*
 project-3
 ====start====
