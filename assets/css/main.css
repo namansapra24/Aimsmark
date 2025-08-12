@@ -1975,8 +1975,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-weight: 900;
   font-family: var(--urbanist);
   text-transform: capitalize;
-  color: #262420;
-  background: var(--chy-pr-3);
+  color: #f6f6f6;
+  background: #031563;
   padding: 10px 31px;
   border-radius: 4px;
   transition: 0.4s ease-in-out;
@@ -1995,8 +1995,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   transition: 0.4s ease-in-out;
 }
 .chy-pr-btn-4:hover {
-  background-color: transparent;
-  color: var(--chy-pr-3);
+  background-color: #425bc9;
+  color: #000000;
 }
 .chy-pr-btn-4:hover::after {
   transform: translate(0);
@@ -2377,7 +2377,6 @@ input:focus::placeholder, textarea:focus::placeholder {
 .chy-heading-1 {
   font-family: var(--urbanist);
   color: #141515;
-  text-transform: capitalize;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 0;
@@ -2512,7 +2511,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   top: 0;
   left: 0;
-  background: var(--chy-pr-3);
+  background: #ff0000;
   border-radius: 3px;
 }
 .chy-subtitle-3::before {
@@ -5361,7 +5360,7 @@ header innter
 .chy-services-2-work .number {
   font-size: 80px;
   font-weight: 800;
-  color: var(--chy-pr-2);
+  color: #ff0000;
 }
 @media (max-width: 767px) {
   .chy-services-2-work .number {
@@ -5383,7 +5382,7 @@ header innter
 }
 .chy-services-3-content .chy-services-2-work .number {
   font-size: 70px;
-  color: var(--chy-pr-3);
+  color: #ff0000;
 }
 
 .chy-services-3-item-wrap {
@@ -10411,21 +10410,18 @@ header innter
   }
 }
 .chy-testimonial-3-item .bio {
-  font-size: 17.2px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
   display: inline-block;
-  background: #031563;
-  padding: 12px 15px;
+  padding: 12px 0px;
   border-radius: 30px;
   opacity: 0;
   transition: 100ms ease-in-out;
   transform: translateY(5px);
-}
-.chy-testimonial-3-item .bio:not(:last-child) {
   margin-bottom: 5px;
 }
+
 .chy-testimonial-3-item .disc {
   transition: 400ms ease-in-out;
   transition-delay: 0.5s;
@@ -10437,22 +10433,47 @@ header innter
   transform: scale(0.5) rotate(32deg);
   opacity: 0;
   transition: 600ms ease-in-out;
+  width: 25%; /* Large screens */
+  max-width: 300px; /* optional limit for huge screens */
 }
+
+/* Medium screens: bigger image but keep layout */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .chy-testimonial-3-item .main-img {
-    width: 40%;
+    width: 35%;
+    max-width: 400px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+
+/* Tablets (768px–991px): stack layout, no absolute position */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .chy-testimonial-3-item .main-img {
-    position: unset;
+    position: static; /* easier flow with text */
     opacity: 1;
-    transform: scale(1) rotate(0);
+    transform: none;
+    width: 55%;
+    margin: 20px auto 0;
+    display: block;
+    max-width: 500px;
   }
 }
+
+/* Mobile (≤767px): full stack, bigger and centered */
+@media only screen and (max-width: 767px) {
+  .chy-testimonial-3-item .main-img {
+    position: static;
+    opacity: 1;
+    transform: none;
+    width: 67%;
+    margin: 15px auto 0;
+    display: block;
+    max-width: 600px;
+  }
+}
+
 .chy-testimonial-3-item .p3-btn {
   display: flex;
-  width: 170px;
+  width: 73px;
   height: 175px;
   border-left: 3px solid;
   border-color: rgb(242, 242, 242);
@@ -10507,7 +10528,7 @@ header innter
 .chy-testimonial-3-item:is(.active) .p3-btn {
   height: 266px;
   line-height: 280px;
-  color: var(--chy-pr-3);
+  color: #ff0000;
   border-left-color: transparent;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
