@@ -10316,6 +10316,13 @@ header innter
   margin-bottom: 5px;
 }
 
+/* Hide .bio on screens smaller than 992px */
+@media (max-width: 991.98px) {
+  .chy-testimonial-3-item .bio {
+    display: none;
+  }
+}
+
 .chy-testimonial-3-item .disc {
   transition: 400ms ease-in-out;
   transition-delay: 0.5s;
