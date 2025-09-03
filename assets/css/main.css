@@ -3616,7 +3616,7 @@ header innter
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: linear-gradient(-3deg, rgb(253, 59, 69) 0%, rgb(250, 134, 64) 100%);
+  background: linear-gradient(-3deg, rgb(253, 59, 69) 0%, rgb(64, 70, 250) 100%);
   left: 23%;
   top: 42%;
   animation: chyh1curle 4s infinite ease-in-out;
@@ -3629,7 +3629,7 @@ header innter
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: linear-gradient(-3deg, rgb(253, 59, 69) 0%, rgb(250, 134, 64) 100%);
+  background: linear-gradient(-3deg, rgb(253, 59, 69) 0%, rgb(64, 70, 250) 100%);
   right: 20%;
   top: 35%;
   animation: chyh1curle 3s infinite ease-in-out;
