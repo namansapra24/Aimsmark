@@ -1,8 +1,6 @@
 <!Doctype html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from html.themexriver.com/choicy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Jul 2025 09:26:44 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,13 +24,13 @@
 
 <body>
 
-    <!-- preloader-start --> 
-     <div id="preloader"> 
-        <div class="preloader-content"> 
-            <img src="assets/img/logo/fulllogo.png" alt="Logo" class="preloader-logo" /> 
-            <div class="loader_line"></div> 
-        </div> 
-    </div> 
+    <!-- preloader-start -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="assets/img/logo/fulllogo.png" alt="Logo" class="preloader-logo" />
+            <div class="loader_line"></div>
+        </div>
+    </div>
     <!-- preloader-end -->
 
     <!-- header-start -->
@@ -333,29 +331,86 @@
                         <h5 class="chy-subtitle-1 subtitle wow fadeInLeft" data-wow-duration="3s">Aimsmark</h5>
                         <h1 class="chy-heading-1 title chy-split-in-hero-1 chy-split-text-2">Building <br> a better you
                         </h1>
-                        <p class="chy-para-1 disc wow fadeInLeft" data-wow-duration="3s">We help ambitious brands grow
-                            smarter in today’s competitive digital space. From SEO and social media to data-driven ads
-                            and impactful web design, our team builds strategies that deliver real results. Whether
-                            you're launching or scaling, we turn clicks into customers and goals into growth.</p>
+                        <p class="chy-para-1 disc wow fadeInLeft" data-wow-duration="3s">We help ambitious brands grow smarter in today’s competitive digital space. From SEO and social media to data-driven ads and impactful web design, our team builds strategies that deliver real results. Whether you're launching or
+                            scaling, we turn clicks into customers and goals into growth.</p>
 
                         <div class="btn-wrap ">
-                            <a href="about-1.html" class="chy-pr-btn-1 wow fadeInLeft" data-wow-delay=".5s"
-                                data-wow-duration="3s">
-                                <span class="text">
-                                    explore more
-                                </span>
+                            <a href="#scroll-target" class="chy-pr-btn-1 wow fadeInLeft" data-wow-delay=".5s" data-wow-duration="3s">
+                                <span class="text">explore more</span>
                                 <span class="icon">
                                     <i class="fa-solid fa-right-long"></i>
                                 </span>
                             </a>
 
-                            <a class="chy-plybtn-1 popup-video wow fadeInLeft " data-wow-duration="3s"
-                                href="https://www.youtube.com/watch?v=e1edxTqJnKk&amp;list=RDQM4DsffdYoWlY&amp;start_radio=1">
+                            <!-- ✅ Your styled button -->
+                            <button class="chy-plybtn-1 popup-video wow fadeInLeft" data-wow-duration="3s" onclick="openPopup()" style="background: none; border: none;">
                                 <span class="icon">
                                     <i class="fas fa-play"></i>
                                 </span>
                                 <span class="text chy-para-1">play video</span>
-                            </a>
+                            </button>
+
+                            <!-- ✅ Popup Video Modal -->
+                            <div id="videoPopup" class="video-popup">
+                                <span class="close-btn" onclick="closePopup()">&times;</span>
+                                <video id="popupVideo" controls autoplay>
+                                    <source src="assets/img/intro_video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <!-- ✅ Styles -->
+                            <style>
+                                .video-popup {
+                                    display: none;
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: rgba(0, 0, 0, 0.8);
+                                    justify-content: center;
+                                    align-items: center;
+                                    z-index: 10;
+                                }
+                                
+                                .video-popup video {
+                                    max-width: 90%;
+                                    max-height: 80%;
+                                    border-radius: 10px;
+                                }
+                                
+                                .close-btn {
+                                    position: absolute;
+                                    top: 20px;
+                                    right: 30px;
+                                    font-size: 30px;
+                                    color: white;
+                                    cursor: pointer;
+                                }
+                            </style>
+
+                            <!-- ✅ Script -->
+                            <script>
+                                function openPopup() {
+                                    document.getElementById('videoPopup').style.display = 'flex';
+                                    document.getElementById('popupVideo').play();
+                                }
+
+                                function closePopup() {
+                                    const popup = document.getElementById('videoPopup');
+                                    const video = document.getElementById('popupVideo');
+                                    popup.style.display = 'none';
+                                    video.pause();
+                                    video.currentTime = 0;
+                                }
+
+                                // Optional: close when clicking outside the video
+                                document.getElementById('videoPopup').addEventListener('click', function(e) {
+                                    if (e.target === this) closePopup();
+                                });
+                            </script>
+
 
                         </div>
 
@@ -371,7 +426,7 @@
                         <div class="il-shape-1">
                             <img src="assets/img/hero/h1-il-1.png" alt="" class=" object" data-value="6">
                         </div>
-                        
+
                         <div class="il-shape-3">
                             <img src="assets/img/hero/h1-il-3.png" alt="" class="object" data-value="3">
                         </div>
@@ -395,9 +450,7 @@
                     <div class="chy-trusted-1-item">
                         <h3 class="chy-trusted-1-title chy-heading-1">Trusted by <span class="icon-1"><img
                                     src="assets/img/trusted/t1-world-1.png" alt=""></span> <span class="icon-2"><img
-                                    src="assets/img/trusted/t1-world-2.png" alt=""></span> 60+ Business <span
-                                class="icon-1"><img src="assets/img/trusted/t1-world-3.png" alt=""></span> <span
-                                class="icon-2"><img src="assets/img/trusted/t1-world-4.png" alt=""></span></h3>
+                                    src="assets/img/trusted/t1-world-2.png" alt=""></span> 60+ Business <span class="icon-1"><img src="assets/img/trusted/t1-world-3.png" alt=""></span> <span class="icon-2"><img src="assets/img/trusted/t1-world-4.png" alt=""></span></h3>
                     </div>
 
                     <div class="chy-trusted-1-item img-cover">
@@ -406,8 +459,7 @@
                                 <i class="fa-solid fa-arrow-down-up-lock"></i>
                             </div>
                             <span class="line"></span>
-                            <h4 class="chy-heading-1 text">Secure & Confidential - We use end-to-end encryption and
-                                strict data privacy protocols</h4>
+                            <h4 class="chy-heading-1 text">Secure & Confidential - We use end-to-end encryption and strict data privacy protocols</h4>
                         </div>
                     </div>
 
@@ -417,8 +469,7 @@
                                 <i class="fa-solid fa-user-group"></i>
                             </div>
                             <span class="line"></span>
-                            <h4 class="chy-heading-1 text">Customer-First Approach - Your goals are our mission, Your
-                                success is our priority.</h4>
+                            <h4 class="chy-heading-1 text">Customer-First Approach - Your goals are our mission, Your success is our priority.</h4>
                         </div>
                     </div>
 
@@ -442,7 +493,7 @@
         <!-- trusted-end -->
 
         <!-- solutions-start -->
-        <div class="chy-solutions-1-area pt-80 pb-120 fix">
+        <div id="scroll-target" class="chy-solutions-1-area pt-80 pb-120 fix">
             <div class="container chy-container-1">
                 <div class="row align-items-center">
 
@@ -451,19 +502,14 @@
                         <div class="chy-solutions-1-content">
                             <div class="section-title-wrap mb-35">
                                 <h5 class="chy-subtitle-1 wow fadeInLeft">about us</h5>
-                                <h2 class="chy-title-1 has-55 chy-split-in-right chy-split-text">An Overview of <br />
-                                    Our Company</h2>
-                                <p class="chy-section-para-1 wow fadeInLeft">In today's digital landscape, a strong
-                                    online presence is paramount. That's where Aimsmark Digital comes in. Founded in
-                                    April 2022, we empower businesses to thrive online by focusing on three key pillars:
-                                    We boost your visibility, reaching a wider audience and driving targeted traffic. We
-                                    equip you with data-driven insights through comprehensive market research, giving
-                                    you a competitive edge and we unify your online ecosystem by integrating your
-                                    profiles and platforms, creating a consistent and engaging brand experience for your
-                                    customers.</p>
+                                <h2 class="chy-title-1 has-55 chy-split-in-right chy-split-text">An Overview of <br /> Our Company</h2>
+                                <p class="chy-section-para-1 wow fadeInLeft">In today's digital landscape, a strong online presence is paramount. That's where Aimsmark Digital comes in. Founded in April 2022, we empower businesses to thrive online by focusing on three key pillars: We boost your
+                                    visibility, reaching a wider audience and driving targeted traffic. We equip you with data-driven insights through comprehensive market research, giving you a competitive edge and we unify your online ecosystem by integrating
+                                    your profiles and platforms, creating a consistent and engaging brand experience for your customers.
+                                </p>
                             </div>
 
-                            <a href="projects-1.html" class="chy-pr-btn-1 wow fadeInLeft">
+                            <a href="services.html" class="chy-pr-btn-1 wow fadeInLeft">
                                 <span class="text">
                                     know more
                                 </span>
@@ -527,8 +573,8 @@
                                 <img src="assets/img/services/s1-icon-6.png" alt="">
                             </div>
                             <h4 class="chy-heading-1 title">social media management</h4>
-                            <p class="chy-para-1 disc">Drive instant traffic and real results with pay-per-click
-                                advertising!</p>
+                            <p class="chy-para-1 disc">Drive instant traffic and real results with pay-per-click advertising!
+                            </p>
                         </div>
                         <div class="body">
                             <ul class="chy-services-1-item-list">
@@ -549,8 +595,8 @@
                                 <img src="assets/img/services/s1-icon-1.png" alt="">
                             </div>
                             <h4 class="chy-heading-1 title">performance Marketing</h4>
-                            <p class="chy-para-1 disc">Maximize ROI and grow faster with data-driven performance
-                                marketing!</p>
+                            <p class="chy-para-1 disc">Maximize ROI and grow faster with data-driven performance marketing!
+                            </p>
                         </div>
                         <div class="body">
                             <ul class="chy-services-1-item-list">
@@ -592,8 +638,8 @@
                                 <img src="assets/img/services/s1-icon-2.png" alt="">
                             </div>
                             <h4 class="chy-heading-1 title">search engine optimization</h4>
-                            <p class="chy-para-1 disc">Boost your visibility and rank higher with powerful SEO
-                                strategies!</p>
+                            <p class="chy-para-1 disc">Boost your visibility and rank higher with powerful SEO strategies!
+                            </p>
                         </div>
                         <div class="body">
                             <ul class="chy-services-1-item-list">
@@ -636,13 +682,12 @@
     <!-- video-start -->
     <div class="chy-video-1-area img-cover">
         <div class="content-wrap">
-            <a aria-label="links" class="chy-plybtn-2 popup-video chy-zoomout2"
-                href="https://www.youtube.com/watch?v=fgWoGHgEN38&amp;list=RDfgWoGHgEN38&amp;start_radio=1">
+            <a aria-label="links" class="chy-plybtn-2 popup-video chy-zoomout2" href="assets/img/intro_video.mp4">
                 <i class="fas fa-play"></i>
                 <img class="text-img" src="assets/img/video/plybtn-text.png" alt="">
             </a>
-            <h4 class="chy-heading-1 title chy-split-in-right chy-split-text">We Help Your Business <br> To Become
-                Stronger</h4>
+            <h4 class="chy-heading-1 title chy-split-in-right chy-split-text">We Help Your Business <br> To Become Stronger
+            </h4>
         </div>
         <img class="chy-zoomout2" src="assets/img/video/v1-img-1.png" alt="">
     </div>
@@ -770,8 +815,8 @@
             <!-- section-title -->
             <div class="section-title-wrap mb-35 text-center">
                 <h5 class="chy-subtitle-1 wow fadeInDown">reviews</h5>
-                <h2 class="chy-title-1  chy-split-in-right chy-split-text">Hear It from<br />the People Who<br />Know Us
-                    Best!</h2>
+                <h2 class="chy-title-1  chy-split-in-right chy-split-text">Hear It from<br />the People Who<br />Know Us Best!
+                </h2>
             </div>
 
             <div class="row">
@@ -785,9 +830,7 @@
                             </div>
                         </div>
                         <h5 class="chy-heading-1 title">"Incredible Results!"</h5>
-                        <p class="chy-para-1 disc">We saw a major jump in website traffic and leads within just a couple
-                            of months. The team knew exactly how to position our brand and manage our ad spend
-                            efficiently. Professional, responsive, and clearly experts in their field.</p>
+                        <p class="chy-para-1 disc">We saw a major jump in website traffic and leads within just a couple of months. The team knew exactly how to position our brand and manage our ad spend efficiently. Professional, responsive, and clearly experts in their field.</p>
                         <p class="chy-para-11 disc">- Naman Singh</p>
                     </div>
                 </div>
@@ -801,9 +844,7 @@
                             </div>
                         </div>
                         <h5 class="chy-heading-1 title">"Highly recommend!"</h5>
-                        <p class="chy-para-1 disc">They helped us with SEO, social media, and email campaigns — and
-                            every part was handled with care. Our monthly reporting is clear and actionable. Great
-                            communication and always willing to go the extra mile.</p>
+                        <p class="chy-para-1 disc">They helped us with SEO, social media, and email campaigns — and every part was handled with care. Our monthly reporting is clear and actionable. Great communication and always willing to go the extra mile.</p>
                         <p class="chy-para-11 disc">- Amrit Singh</p>
                     </div>
                 </div>
@@ -817,9 +858,7 @@
                             </div>
                         </div>
                         <h5 class="chy-heading-1 title">"Creative Company!"</h5>
-                        <p class="chy-para-1 disc">What I love about working with this agency is how they balance
-                            creativity with analytics. The content they create is sharp, on-brand, and it actually
-                            converts. We’ve seen real ROI since partnering with them.</p>
+                        <p class="chy-para-1 disc">What I love about working with this agency is how they balance creativity with analytics. The content they create is sharp, on-brand, and it actually converts. We’ve seen real ROI since partnering with them.</p>
                         <p class="chy-para-11 disc">- Dalbir Singh</p>
                     </div>
                 </div>
@@ -833,9 +872,7 @@
                             </div>
                         </div>
                         <h5 class="chy-heading-1 title">"True and Honest"</h5>
-                        <p class="chy-para-1 disc">From day one, they treated our business like their own. Their
-                            strategy sessions are thoughtful, and execution is always on time. It’s rare to find a
-                            marketing partner that’s this aligned with your goals.</p>
+                        <p class="chy-para-1 disc">From day one, they treated our business like their own. Their strategy sessions are thoughtful, and execution is always on time. It’s rare to find a marketing partner that’s this aligned with your goals.</p>
                         <p class="chy-para-11 disc">- Rajvinder Singh</p>
                     </div>
                 </div>
@@ -856,8 +893,8 @@
                     <!-- .section-title -->
                     <div class="section-title-wrap">
                         <h5 class="chy-subtitle-1 wow fadeInDown">contact us</h5>
-                        <h2 class="chy-title-1  chy-split-in-right chy-split-text">Ready To <br> Upstage
-                            yourself?</h2>
+                        <h2 class="chy-title-1  chy-split-in-right chy-split-text">Ready To <br> Upstage yourself?
+                        </h2>
                     </div>
                     <a href="contact.html" class="chy-pr-btn-1 ">
                         <span class="text">
@@ -972,13 +1009,15 @@
             <div class="chy-footer-1-bottom">
                 <ul class="chy-footer-1-social-link">
                     <li>
-                        <a aria-label="links" href="https://www.instagram.com/aimsmarkagency/#"><i class="fab fa-instagram"></i></a>
+                        <a aria-label="links" href="https://www.instagram.com/aimsmarkagency/#"><i
+                                class="fab fa-instagram"></i></a>
                     </li>
                     <li>
                         <a aria-label="links" href="https://wa.me/9820832228"><i class="fab fa-whatsapp"></i></a>
                     </li>
                     <li>
-                        <a aria-label="links" href="https://www.youtube.com/@aimsmarkdigitalagency8879"><i class="fab fa-youtube"></i></a>
+                        <a aria-label="links" href="https://www.youtube.com/@aimsmarkdigitalagency8879"><i
+                                class="fab fa-youtube"></i></a>
                     </li>
                 </ul>
                 <h4 class="chy-heading-1 copyright-link">2025 Aimsmark <span>| all rights reserved Aimsmark</span></h4>
@@ -1018,8 +1057,16 @@
     <script src="assets/js/magnific-popup.min.js"></script>
     <script src="assets/js/appear.min.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
 
-<!-- Mirrored from html.themexriver.com/choicy/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Jul 2025 09:27:38 GMT -->
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup/dist/magnific-popup.css">
+
+    <!-- jQuery (required for Magnific Popup) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Magnific Popup JS -->
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+
+</body>
 
 </html>
